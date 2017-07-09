@@ -15,6 +15,7 @@ Control::~Control() {
 
 }
 
+//hide/show control
 void Control::Show() {
 	this->showed = true;
 }
@@ -29,7 +30,7 @@ bool Control::getShowed() {
 	return this->showed;
 }
 
-
+//get focus state for control
 Control* Control::getFocus() {
 
 	return focus;
@@ -49,7 +50,7 @@ void Control::setFocus(Control &control) {
 	control.setLayer(1);
 	control.SetForeground(Color::Orange);
 }
-
+//getter/setter top/left control coordinates 
 void Control::setLeft(int _left) {
 	this->left = _left;
 }
@@ -96,6 +97,7 @@ void Control::drawBorder(BorderType border) {
 	int i = this->getLeft() - 1;
 	int j = this->getTop() - 1;
 
+	//drawing the control's border with ascii hex codes
 	switch (border) {
 
 	case BorderType::Double:

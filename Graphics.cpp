@@ -100,7 +100,7 @@ void Graphics::updateConsoleAttributes()
 	SetConsoleTextAttribute(_console, attributes);
 }
 
-bool isInside(int x, int y, int left, int top, int width, int height)
+bool isInside(int x, int y, int left, int top, int width, int height)	//check mouse click location
 {
 	x -= left;
 	y -= top;
